@@ -1,0 +1,28 @@
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+CREATE TABLE aluno (
+  `Num_matricula` int(20) NOT NULL,
+  `email` varchar(30) NOT NULL,
+  `senha` varchar(30) NOT NULL,
+  `nome` varchar(40) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE professor (
+  `cod_professor` int(30) NOT NULL,
+  `nome` varchar(40) NOT NULL,
+  `materia` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+ALTER TABLE aluno
+  ADD PRIMARY KEY (`Num_matricula`);
+
+ALTER TABLE professor
+  ADD PRIMARY KEY (`cod_professor`);
+
+
+ALTER TABLE aluno
+  MODIFY `Num_matricula` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+ALTER TABLE professor
+  MODIFY `cod_professor` int(30) NOT NULL AUTO_INCREMENT;
